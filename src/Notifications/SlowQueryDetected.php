@@ -3,7 +3,6 @@
 namespace Vormkracht10\LaravelSlowQuery\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Http\Request;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
@@ -15,10 +14,9 @@ class SlowQueryDetected extends Notification
 
     public $deployment;
 
-    public function __construct(Query $query, Request $request)
+    public function __construct(Query $query)
     {
         $this->query = $query;
-        $this->request = $request;
     }
 
     public function via($notifiable)
@@ -48,7 +46,7 @@ class SlowQueryDetected extends Notification
                     'inline' => false,
                 ],
             ],
-            'url' => $this->request->fullUrlWithQuery(),
+            // 'url' => request()->fullUrlWithQuery(),
         ]);
     }
 }
