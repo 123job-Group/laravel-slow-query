@@ -16,7 +16,8 @@
     }],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^6.0",
+        "laravel-notification-channels/discord": "^1.1"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
