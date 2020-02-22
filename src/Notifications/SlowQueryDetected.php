@@ -5,14 +5,13 @@ namespace Vormkracht10\SlowQuery\Notifications;
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Arr;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
 
 class SlowQueryDetected extends Notification
 {
     use Queueable;
-
-    public $deployment;
 
     public function __construct(QueryExecuted $query)
     {
