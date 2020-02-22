@@ -19,12 +19,12 @@ class SlowQueryDetected extends Notification
         $this->query = $query;
     }
 
-    public function via($notifiable)
+    public function via()
     {
         return [DiscordChannel::class];
     }
 
-    public function toDiscord($notifiable)
+    public function toDiscord()
     {
         $message = array_random([
             '☝🏻',

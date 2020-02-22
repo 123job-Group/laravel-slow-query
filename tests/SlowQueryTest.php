@@ -3,6 +3,7 @@
 namespace Vormkracht10\SlowQuery\Tests;
 
 use Illuminate\Database\Events\QueryExecuted;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Orchestra\Testbench\TestCase;
@@ -26,6 +27,9 @@ class SlowQueryTest extends TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
+        $app['config']->set('services.discord', [
+            'token' => 'NjcyODk1MTE3ODcwNDk3Nzky.XjSInQ.4FK8hYsnYqKA2Rnoiq_djguyPaY',
+        ]);
     }
 
     protected function getPackageProviders($app)
