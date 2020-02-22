@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
 use Vormkracht10\SlowQuery\Events\QueryExecutedSlowly;
 use Vormkracht10\SlowQuery\Notifications\SlowQueryDetected;
-use Vormkracht10\SlowQuery\Query;
 
 class SlowQueryServiceProvider extends ServiceProvider
 {
@@ -38,7 +37,7 @@ class SlowQueryServiceProvider extends ServiceProvider
         });
     }
 
-    public function slowQueryCheck(Query $query)
+    public function slowQueryCheck(QueryExecuted $query)
     {
         return $query->time >= Config::get('slow-query.slow_query_treshold_in_ms');
     }
