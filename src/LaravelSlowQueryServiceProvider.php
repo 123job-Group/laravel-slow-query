@@ -30,7 +30,7 @@ class LaravelSlowQueryServiceProvider extends ServiceProvider
             $query = $this->makeQuery($query->sql, $query->bindings, $query->time, $query->connectionName);
 
             if ($this->slowQueryCheck($query)) {
-                event(FoundSlowQuery($query));
+                event(QueryExecutedSlowly($query));
             }
         });
 
