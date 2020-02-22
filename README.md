@@ -1,11 +1,12 @@
-# Very short description of the package
+# Logs and notifies of slow queries in Laravel
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vormkracht10/laravel-slow-query.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-slow-query)
 [![Build Status](https://img.shields.io/travis/vormkracht10/laravel-slow-query/master.svg?style=flat-square)](https://travis-ci.org/vormkracht10/laravel-slow-query)
 [![Quality Score](https://img.shields.io/scrutinizer/g/vormkracht10/laravel-slow-query.svg?style=flat-square)](https://scrutinizer-ci.com/g/vormkracht10/laravel-slow-query)
 [![Total Downloads](https://img.shields.io/packagist/dt/vormkracht10/laravel-slow-query.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-slow-query)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Whenever a query runs slowly in your Laravel app, you probably would like to know about it. That's why we created this simple but effective package, to notify and log all the queries
+that should be optimized within your Laravel app.
 
 ## Installation
 
