@@ -11,7 +11,7 @@ return [
     'notifications' => [
         'default' => 'discord',
         'discord' => [
-            'channel' => 680703864172707841,
+            'channel' => null,
         ],
     ],
 ];
