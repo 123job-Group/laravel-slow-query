@@ -28,7 +28,7 @@ class SlowQueryTest extends TestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('services.discord', [
-            'token' => 'NjcyODk1MTE3ODcwNDk3Nzky.XjSInQ.4FK8hYsnYqKA2Rnoiq_djguyPaY',
+            'token' => env('DISCORD_TOKEN'),
         ]);
     }
 
