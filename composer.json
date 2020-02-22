@@ -1,0 +1,55 @@
+{
+    "name": "vormkracht10/laravel-slow-query",
+    "description": "Log and notify when slow queries in Laravel happen",
+    "keywords": [
+        "vormkracht10",
+        "laravel-slow-query"
+    ],
+    "homepage": "https://github.com/vormkracht10/laravel-slow-query",
+    "license": "MIT",
+    "type": "library",
+    "authors": [{
+        "name": "Mark van Eijk",
+        "email": "mark@vormkracht10.nl",
+        "homepage": "https://markvaneijk.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vormkracht10\\LaravelSlowQuery\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vormkracht10\\LaravelSlowQuery\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vormkracht10\\LaravelSlowQuery\\LaravelSlowQueryServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSlowQuery": "Vormkracht10\\LaravelSlowQuery\\LaravelSlowQueryFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
