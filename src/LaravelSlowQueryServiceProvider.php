@@ -1,16 +1,16 @@
 <?php
 
-namespace Vormkracht10\LaravelSlowQuery;
+namespace Vormkracht10\SlowQuery;
 
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\ServiceProvider;
-use Vormkracht10\LaravelSlowQuery\Events\QueryExecutedSlowly;
-use Vormkracht10\LaravelSlowQuery\Notifications\SlowQueryDetected;
-use Vormkracht10\LaravelSlowQuery\Query;
+use Vormkracht10\SlowQuery\Events\QueryExecutedSlowly;
+use Vormkracht10\SlowQuery\Notifications\SlowQueryDetected;
+use Vormkracht10\SlowQuery\Query;
 
-class LaravelSlowQueryServiceProvider extends ServiceProvider
+class SlowQueryServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.

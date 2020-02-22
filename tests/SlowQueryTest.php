@@ -1,12 +1,12 @@
 <?php
 
-namespace Vormkracht10\LaravelSlowQuery\Tests;
+namespace Vormkracht10\SlowQuery\Tests;
 
 use Illuminate\Support\Facades\Event;
 use Orchestra\Testbench\TestCase;
-use Vormkracht10\LaravelSlowQuery\Events\QueryExecutedSlowly;
-use Vormkracht10\LaravelSlowQuery\LaravelSlowQueryServiceProvider;
-use Vormkracht10\LaravelSlowQuery\Query;
+use Vormkracht10\SlowQuery\Events\QueryExecutedSlowly;
+use Vormkracht10\SlowQuery\SlowQueryServiceProvider;
+use Vormkracht10\SlowQuery\Query;
 
 class SlowQueryTest extends TestCase
 {
@@ -29,7 +29,7 @@ class SlowQueryTest extends TestCase
 
     protected function getPackageProviders($app)
     {
-        return [LaravelSlowQueryServiceProvider::class];
+        return [SlowQueryServiceProvider::class];
     }
 
     public function test_when_event_dispatches_notification_will_be_sent()

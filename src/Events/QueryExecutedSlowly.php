@@ -1,9 +1,9 @@
 <?php
 
-namespace Vormkracht10\LaravelSlowQuery\Events;
+namespace Vormkracht10\SlowQuery\Events;
 
 use Illuminate\Queue\SerializesModels;
-use Vormkracht10\LaravelSlowQuery\Query;
+use Vormkracht10\SlowQuery\Query;
 
 class QueryExecutedSlowly
 {

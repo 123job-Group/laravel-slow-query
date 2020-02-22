@@ -1,6 +1,6 @@
 <?php
 
-namespace Vormkracht10\LaravelSlowQuery;
+namespace Vormkracht10\SlowQuery;
 
 class Query
 {

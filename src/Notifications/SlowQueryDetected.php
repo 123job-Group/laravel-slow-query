@@ -1,12 +1,12 @@
 <?php
 
-namespace Vormkracht10\LaravelSlowQuery\Notifications;
+namespace Vormkracht10\SlowQuery\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
-use Vormkracht10\LaravelSlowQuery\Query;
+use Vormkracht10\SlowQuery\Query;
 
 class SlowQueryDetected extends Notification
 {

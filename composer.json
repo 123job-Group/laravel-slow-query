@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Vormkracht10\\LaravelSlowQuery\\": "src"
+            "Vormkracht10\\SlowQuery\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vormkracht10\\LaravelSlowQuery\\Tests\\": "tests"
+            "Vormkracht10\\SlowQuery\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vormkracht10\\LaravelSlowQuery\\LaravelSlowQueryServiceProvider"
+                "Vormkracht10\\SlowQuery\\SlowQueryServiceProvider"
             ],
             "aliases": {
-                "LaravelSlowQuery": "Vormkracht10\\LaravelSlowQuery\\LaravelSlowQueryFacade"
+                "SlowQuery": "Vormkracht10\\SlowQuery\\SlowQueryFacade"
             }
         }
     },
