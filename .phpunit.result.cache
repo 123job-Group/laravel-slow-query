@@ -1,1 +1,0 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":264:{a:2:{s:7:"defects";a:1:{s:96:"Vormkracht10\SlowQuery\Tests\SlowQueryTest::test_when_event_dispatches_notification_will_be_sent";i:4;}s:5:"times";a:1:{s:96:"Vormkracht10\SlowQuery\Tests\SlowQueryTest::test_when_event_dispatches_notification_will_be_sent";d:0.038;}}}

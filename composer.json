@@ -15,7 +15,7 @@
         "role": "Developer"
     }],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "illuminate/support": "^6.0",
         "laravel-notification-channels/discord": "^1.1"
     },
