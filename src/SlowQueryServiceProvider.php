@@ -28,7 +28,7 @@ class SlowQueryServiceProvider extends ServiceProvider
     {
         $events->listen(QueryExecuted::class, function (QueryExecuted $query) {
             if ($this->slowQueryCheck($query)) {
-                event(QueryExecutedSlowly($query));
+                event(new QueryExecutedSlowly($query));
             }
         });
 
