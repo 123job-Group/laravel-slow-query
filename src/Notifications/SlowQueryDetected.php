@@ -26,7 +26,7 @@ class SlowQueryDetected extends Notification
 
     public function toDiscord()
     {
-        $message = array_random([
+        $message = Arr::random([
             '☝🏻',
         ]);
 
