@@ -1,5 +1,3 @@
-build
+.env
+.phpunit.result.cache
 composer.lock
-docs
-vendor
-coverage
