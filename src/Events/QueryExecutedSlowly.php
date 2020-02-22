@@ -2,6 +2,7 @@
 
 namespace Vormkracht10\SlowQuery\Events;
 
+use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Queue\SerializesModels;
 
 class QueryExecutedSlowly
@@ -10,7 +11,7 @@ class QueryExecutedSlowly
 
     public $query;
 
-    public function __construct($query)
+    public function __construct(QueryExecuted $query)
     {
         $this->query = $query;
     }
