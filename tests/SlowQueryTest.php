@@ -5,8 +5,8 @@ namespace Vormkracht10\SlowQuery\Tests;
 use Illuminate\Support\Facades\Event;
 use Orchestra\Testbench\TestCase;
 use Vormkracht10\SlowQuery\Events\QueryExecutedSlowly;
-use Vormkracht10\SlowQuery\SlowQueryServiceProvider;
 use Vormkracht10\SlowQuery\Query;
+use Vormkracht10\SlowQuery\SlowQueryServiceProvider;
 
 class SlowQueryTest extends TestCase
 {
@@ -36,9 +36,7 @@ class SlowQueryTest extends TestCase
     {
         // Event::fake();
 
-        $query = new Query('SELECT * FROM customers', [], 2000, 'default');
-
-        event(new QueryExecutedSlowly($query));
+        event(new QueryExecutedSlowly());
 
         // Event::assertDispatched(QueryExecutedSlowly::class, function ($event) use ($query) {
         //     return $event->query->sql == $query->sql;
