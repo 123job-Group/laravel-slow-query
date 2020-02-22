@@ -6,7 +6,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/vormkracht10/laravel-slow-query.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-slow-query)
 
 Whenever a query runs slowly in your Laravel app, you probably would like to know about it. That's why we created this simple but effective package, to notify and log all the queries
-that should be optimized within your Laravel app.
+that needs some care within your Laravel app.
 
 ## Installation
 
@@ -18,13 +18,13 @@ composer require vormkracht10/laravel-slow-query
 
 ## Usage
 
-``` php
+```php
 // Usage description here
 ```
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -42,8 +42,8 @@ If you discover any security related issues, please email mark@vormkracht10.nl i
 
 ## Credits
 
-- [Mark van Eijk](https://github.com/vormkracht10)
-- [All Contributors](../../contributors)
+-   [Mark van Eijk](https://github.com/vormkracht10)
+-   [All Contributors](../../contributors)
 
 ## License
 
