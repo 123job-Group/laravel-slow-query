@@ -3,7 +3,6 @@
 namespace Vormkracht10\SlowQuery\Events;
 
 use Illuminate\Queue\SerializesModels;
-use Vormkracht10\SlowQuery\Query;
 
 class QueryExecutedSlowly
 {
