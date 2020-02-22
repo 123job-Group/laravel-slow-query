@@ -39,14 +39,16 @@ class SlowQueryTest extends TestCase
 
     public function test_when_event_dispatches_notification_will_be_sent()
     {
-        // Event::fake();
+        // wip
+
+        Event::fake();
 
         $query = (new QueryExecuted('', [], 1000, DB::connection()));
 
         event(new QueryExecutedSlowly($query));
 
-        // Event::assertDispatched(QueryExecutedSlowly::class, function ($event) use ($query) {
-        //     return $event->query->sql == $query->sql;
-        // });
+        Event::assertDispatched(QueryExecutedSlowly::class, function ($event) use ($query) {
+            return $event->query->sql == $query->sql;
+        });
     }
 }

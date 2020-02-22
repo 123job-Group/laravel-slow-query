@@ -6,6 +6,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Request;
 use NotificationChannels\Discord\DiscordChannel;
 use NotificationChannels\Discord\DiscordMessage;
 
@@ -26,14 +29,23 @@ class SlowQueryDetected extends Notification
     public function toDiscord()
     {
         $message = Arr::random([
-            '☝🏻',
+            '☝🏻', '⚠️', '❗️', '🚨', '🤖',
         ]);
 
-        $message .= ' Slow query has been detected on **' . config('app.name') . '**';
+        $message .= ' Slow query has been detected on **' . Config::get('app.name') . '**';
+        $additional = [];
 
-        return DiscordMessage::create($message, [
-            'title' => config('app.name'),
-            'color' => '3066993',
+        if (!App::runningInConsole()) {
+            $url = Request::fullUrl();
+
+            $additional = [
+                'url' => $url,
+            ];
+        }
+
+        return DiscordMessage::create($message, array_merge([
+            'title' => Config::get('app.name'),
+            'color' => '15105570',
             'fields' => [
                 [
                     'name' => 'SQL',
@@ -41,11 +53,14 @@ class SlowQueryDetected extends Notification
                     'inline' => false,
                 ], [
                     'name' => 'Time run',
-                    'value' => $this->query->time,
+                    'value' => ($this->query->time / 1000) . ' seconds',
+                    'inline' => false,
+                ], [
+                    'name' => 'URL',
+                    'value' => $url ?? 'Console',
                     'inline' => false,
                 ],
             ],
-            // 'url' => request()->fullUrlWithQuery(),
-        ]);
+        ], $additional));
     }
 }
