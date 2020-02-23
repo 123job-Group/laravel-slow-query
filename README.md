@@ -1,4 +1,4 @@
-# Logs and notifies of slow queries in Laravel
+# Detect, log and notify about slow queries in your Laravel app
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/vormkracht10/laravel-slow-query.svg?style=flat-square)](https://packagist.org/packages/vormkracht10/laravel-slow-query)
 [![Build Status](https://img.shields.io/travis/vormkracht10/laravel-slow-query/master.svg?style=flat-square)](https://travis-ci.org/vormkracht10/laravel-slow-query)
