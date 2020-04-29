@@ -3,12 +3,14 @@ name: code-refactor
 on:
     pull_request:
         branches:
+            - master
             - develop
             - feature/*
 
 jobs:
   code-refactor:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
     - uses: actions/checkout@v2
@@ -25,7 +27,7 @@ jobs:
         CI: true
 
     - name: Run prettier
-      run: npm run prettier
+      run: npx prettier --write 'resources/**/*.{css,js,vue}' --config .prettierrc
 
     - name: Commit changed files
       uses: stefanzweifel/git-auto-commit-action@v4.1.2
